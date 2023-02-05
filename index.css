@@ -1,0 +1,68 @@
+body{
+    margin: auto;
+    text-align: center;
+    background-color: #bfc0c0;
+    
+}
+
+header{
+    background-color: #2D3142;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    width: 100%;
+    margin-bottom: 2em;
+    font-size: 1.1rem;
+    position: fixed;
+}
+
+h1{
+    color: #FFFFFF;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding-top: 8em;
+}
+
+hr{
+    border: none;
+    background-color: #ff5d18;
+    height: 2.5px;
+    width: 80%;
+}
+
+#form-title{
+    padding: .6em;
+}
+
+#form-body{
+    resize: none;
+    margin: 2em 0;
+    height: 10em;
+}
+
+#form-title, #form-body{
+    border: 2.5px solid #ff5d18;
+    font-size: 1rem;
+}
+
+#blog-post{
+    padding: 0 2em;
+    font-size: 1em;
+}
+
+button{
+    padding: .65em 0;
+    background-color:#ff5d18;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color:#FFFFFF;
+    font-size: 1.1rem;
+    margin-bottom: 1.5em;
+}
