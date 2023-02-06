@@ -1,4 +1,7 @@
 let postsArray = [];
+const titleInput = document.getElementById("form-title");
+const bodyInput = document.getElementById("form-body");
+const form = document.getElementById("new-post");
 
 function renderPosts() {
   let html = "";
@@ -19,10 +22,10 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     renderPosts();
   });
 
-document.getElementById("new-post").addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const formTitle = document.getElementById("form-title").value;
-  const formBody = document.getElementById("form-body").value;
+  const formTitle = titleInput.value;
+  const formBody = bodyInput.value;
   const data = {
     title: formTitle,
     body: formBody,
@@ -41,5 +44,9 @@ document.getElementById("new-post").addEventListener("submit", function (e) {
     .then((post) => {
       postsArray.unshift(post);
       renderPosts();
+      // titleInput.value = "";
+      // bodyInput.value = "";
+      // showing here 2 ways to clear input/textarea fields
+      form.reset();
     });
 });
